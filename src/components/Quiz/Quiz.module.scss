@@ -1,0 +1,85 @@
+.quiz {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__sections, &__section, &__variants {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sections {
+    gap: 35px;
+  }
+
+  &__section {
+    gap: 10px;
+  }
+
+  &__variants {
+    gap: 8px;
+  }
+
+  &__quest {
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  &__variant {
+    $variant: &;
+
+    display: flex;
+    gap: 7px;
+
+    &_input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+
+      &:checked + #{$variant}_label {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &_label {
+      position: relative;
+      padding-left: 20px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 16px;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 1px solid;
+        border-radius: 50%;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 4px;
+        left: 4px;
+        top: 9px;
+        border-radius: 50%;
+        background-color: #000;
+        opacity: 0;
+        transition: 0.15s;
+      }
+    }
+  }
+}

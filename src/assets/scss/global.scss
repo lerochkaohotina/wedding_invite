@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Merriweather:wght@300;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.italic {
+  font-family: 'Comforter Brush', cursive;
+}
+
+html,
+body {
+  font-family: 'Merriweather', serif;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+button {
+  font-family: 'Merriweather', serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
